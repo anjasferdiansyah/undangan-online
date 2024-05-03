@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-EB;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateY(1rem);
+      opacity: 0;
+    }
+
+    10% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+  }
+
+  .scroll-animation {
+    width: 0.25rem;
+    height: 0.625rem;
+    border-radius: 25%;
+    background-color: #808080;
+    animation-name: scroll;
+    animation-duration: 2.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+@layer components {
+  #textHandwriting path {
+    stroke-dasharray: 600px;
+    stroke: black;
+    animation: 7s fillSvg cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  @keyframes fillSvg {
+    0% {
+      stroke-dashoffset: 600px;
+      fill: transparent;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+}
