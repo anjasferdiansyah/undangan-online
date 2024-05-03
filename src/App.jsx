@@ -9,6 +9,7 @@ import DetailEvent from "./components/DetailEvent";
 import GallerySection from "./components/GallerySection";
 import RSVPSection from "./components/RSVPSection";
 import Footer from "./components/Footer";
+import Navigation from "./components/Navigation";
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -87,6 +88,7 @@ const App = () => {
           initial={{ opacity: 0, transition: { duration: 2 } }}
           animate={{ opacity: 1, transition: { duration: 2 } }}
         >
+          <Navigation />
           <HomeSection />
           <MempelaiSection />
           <DetailEvent />

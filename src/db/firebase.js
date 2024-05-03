@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBZPw8rma79En-pMZUcIv7C7aPwA09xn3M",
-  authDomain: "undangan-a3acf.firebaseapp.com",
-  projectId: "undangan-a3acf",
-  storageBucket: "undangan-a3acf.appspot.com",
-  messagingSenderId: "918506148487",
-  appId: "1:918506148487:web:5f350ac759347b3505de22",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase

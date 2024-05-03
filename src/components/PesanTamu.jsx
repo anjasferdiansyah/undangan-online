@@ -19,14 +19,15 @@ const PesanTamu = () => {
   const [guests, setGuests] = useState([]);
   const [lastVisible, setLastVisible] = useState(null);
 
-  console.log(guests);
   useEffect(() => {
     const getGuests = async () => {
       const docRef = collection(db, "guest");
       const querySnapshot = await getDocs(
         query(docRef, orderBy("createdAt", "desc"), limit(5))
       );
+
       const guestsList = querySnapshot.docs.map((doc) => doc.data());
+      console.log(guestsList);
       setGuests(guestsList);
       if (!querySnapshot.empty) {
         setLastVisible(querySnapshot.docs[querySnapshot.docs.length - 1]);
@@ -139,12 +140,14 @@ const PesanTamu = () => {
             <UcapanDanDoa key={index} data={guest} />
           ))}
         <div className="flex justify-center">
-          <button
-            className="p-2 border-[1px] text-blue-500 hover:bg-blue-500 hover:text-white rounded"
-            onClick={handleLoadMore}
-          >
-            Load More
-          </button>
+          {lastVisible && guests.length >= 5 && (
+            <button
+              className="p-2 border-[1px] text-blue-500 hover:bg-blue-500 hover:text-white rounded"
+              onClick={handleLoadMore}
+            >
+              Load More
+            </button>
+          )}
         </div>
       </div>
     </>
