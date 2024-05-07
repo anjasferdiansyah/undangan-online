@@ -10,7 +10,7 @@ const RSVPSection = () => {
   };
 
   return (
-    <section>
+    <section id="rsvp">
       <div className="container mx-auto py-2 px-4 md:px-0">
         <div className="mt-10 w-full">
           <h1 className="text-3xl text-center font-dancing">Wedding Gift</h1>

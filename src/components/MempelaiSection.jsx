@@ -20,8 +20,8 @@ const MempelaiSection = () => {
   const isInViewGroom = useInView(groomContainer, { amount: "200px" });
 
   return (
-    <section className="bg-gray-300">
-      <div className="container mx-auto py-2 px-4 md:px-0">
+    <section id="mempelai" className="bg-gray-900">
+      <div className="container mx-auto py-2 px-4 md:px-0 text-white">
         <h1 className="text-4xl text-center my-4">
           بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
         </h1>
@@ -84,7 +84,7 @@ const MempelaiSection = () => {
               <p>Bapak Mohamad Ridwan & Ibu Kartika Sari</p>
             </div>
           </div>
-          <h1 className="w-full px-20 mx-auto before:content-[''] before:block before:h-[1px] before:bg-black after:content-[''] after:block after:h-[1px] after:bg-black grid grid-cols-[1fr_auto_1fr] gap-2 items-center text-center">
+          <h1 className="w-full px-20 mx-auto before:content-[''] before:block before:h-[1px] before:bg-white after:content-[''] after:block after:h-[1px] after:bg-white grid grid-cols-[1fr_auto_1fr] gap-2 items-center text-center">
             <span className="">&</span>
           </h1>
           <div className="md:flex md:justify-between max-w-xl mx-auto py-8">

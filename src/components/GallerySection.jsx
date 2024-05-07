@@ -11,7 +11,7 @@ import { AnimatePresence } from "framer-motion";
 
 const GallerySection = () => {
   const [parallaxSwiper, setParallaxSwiper] = useState("");
-  const parallaxAmount = parallaxSwiper ? parallaxSwiper.width * 0.89 : 0;
+  const parallaxAmount = parallaxSwiper ? parallaxSwiper.width * 0.79 : 0;
 
   const listImage = [
     "/img/nikah.jpg",
@@ -49,18 +49,17 @@ const GallerySection = () => {
   };
 
   return (
-    <section className="my-12">
+    <section id="gallery" className="my-12">
       <Swiper
         cssMode
         parallax={true}
-        autoplay={{ delay: 2500 }}
         onSwiper={setParallaxSwiper}
         loop={true}
         speed={600}
         modules={[Parallax, Pagination, Navigation, Autoplay]}
         pagination={{ clickable: true }}
         navigation={true}
-        className="block max-w-xl w-[90%] mx-auto h-[200px] aspect-square"
+        className="block z-0 max-w-xl w-[90%] mx-auto h-[300px] aspect-square"
       >
         <SwiperSlide className="overflow-hidden">
           <div

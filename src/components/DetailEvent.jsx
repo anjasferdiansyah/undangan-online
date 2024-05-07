@@ -3,7 +3,7 @@ import CountDownTimer from "./CountDownTimer";
 
 const DetailEvent = () => {
   return (
-    <section className="">
+    <section className="acara">
       <div className="container w-full mx-auto py-4 px-4 md:px-0">
         <h1 className="text-3xl text-center font-dancing">
           Waktu Menuju Acara

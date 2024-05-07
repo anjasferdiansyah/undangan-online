@@ -10,6 +10,7 @@ import GallerySection from "./components/GallerySection";
 import RSVPSection from "./components/RSVPSection";
 import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
+import Audio from "./components/Audio";
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -24,6 +25,7 @@ const App = () => {
   }, []);
 
   const buttonRef = useRef(null);
+  const audioRef = useRef(null);
   const animation = () => {
     const duration = 15 * 1000;
     const animationEnd = Date.now() + duration;
@@ -95,6 +97,7 @@ const App = () => {
           <GallerySection />
           <RSVPSection />
           <Footer />
+          <Audio audioRef={audioRef} />
         </motion.div>
       )}
     </>
