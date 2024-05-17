@@ -29,7 +29,20 @@ const UcapanDanDoa = ({ data }) => {
   return (
     <div className="p-4 my-5 shadow-md rounded-md">
       <div className="flex justify-between border-b-[1px] border-gray-300 py-2">
-        <h1 className="font-bold">{data?.nama}</h1>
+        <h1 className="font-bold flex items-center">
+          {data?.nama === "Anjas" ? (
+            <span>
+              Anjas{" "}
+              <img
+                src="/img/verified.png"
+                alt="anjas"
+                className="w-4 inline-block mb-1"
+              />
+            </span>
+          ) : (
+            data?.nama
+          )}
+        </h1>
         <p>{formatDate(date)}</p>
       </div>
       <h1 className="my-2">{data?.pesan}</h1>
