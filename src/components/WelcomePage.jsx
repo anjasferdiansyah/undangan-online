@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useSearchParams } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 
@@ -18,6 +19,10 @@ const slideUp = {
 
 // eslint-disable-next-line react/prop-types
 const WelcomePage = ({ buttonRef, handleOpen }) => {
+  const [searchParams] = useSearchParams();
+
+  const namaTamu = searchParams.get("nama");
+
   return (
     <motion.section
       variants={slideUp}
@@ -33,7 +38,7 @@ const WelcomePage = ({ buttonRef, handleOpen }) => {
       <p className="text-lg font-semibold">
         Kepada Yth. Bpk/Ibu/Saudara/Saudari
       </p>
-      <h1 className="text-3xl font-semibold">Anjas</h1>
+      <h1 className="text-3xl font-semibold">{namaTamu}</h1>
       <button
         ref={buttonRef}
         className=" bg-slate-500 px-2 py-1 rounded mt-10"

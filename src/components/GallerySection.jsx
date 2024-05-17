@@ -11,7 +11,7 @@ import { AnimatePresence } from "framer-motion";
 
 const GallerySection = () => {
   const [parallaxSwiper, setParallaxSwiper] = useState("");
-  const parallaxAmount = parallaxSwiper ? parallaxSwiper.width * 0.79 : 0;
+  const parallaxAmount = parallaxSwiper ? parallaxSwiper.width * 0.8 : 0;
 
   const listImage = [
     "/img/nikah.jpg",
