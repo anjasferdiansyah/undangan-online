@@ -2,6 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { slideUp } from "../utils/anim";
 import { useEffect, useRef } from "react";
 import AOS from "aos";
+import { Instagram } from "lucide-react";
 
 const MempelaiSection = () => {
   useEffect(() => {
@@ -82,6 +83,13 @@ const MempelaiSection = () => {
               </h1>
               <p>Putri kedua dari</p>
               <p>Bapak Mohamad Ridwan & Ibu Kartika Sari</p>
+              <a
+                className="flex gap-2 justify-center items-center underline"
+                href="https://www.instagram.com/nrkppr"
+              >
+                <Instagram size={22} />
+                nrkppr
+              </a>
             </div>
           </div>
           <h1 className="w-full px-20 mx-auto before:content-[''] before:block before:h-[1px] before:bg-white after:content-[''] after:block after:h-[1px] after:bg-white grid grid-cols-[1fr_auto_1fr] gap-2 items-center text-center">
@@ -122,6 +130,14 @@ const MempelaiSection = () => {
               </h1>
               <p>Putra pertama dari</p>
               <p>Bapak Dian Nurdiana & Ibu Lilis Martiningsih</p>
+
+              <a
+                className="flex gap-2 justify-center items-center underline"
+                href="https://www.instagram.com/anjasferdiansyah"
+              >
+                <Instagram size={22} />
+                anjasferdiansyah
+              </a>
             </div>
           </div>
         </div>
