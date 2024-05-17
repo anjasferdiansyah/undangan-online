@@ -35,8 +35,8 @@ const Footer = () => {
         <div>
           <p className="text-md text-center">Made with ❤️ by Anjas</p>
           <div className="flex gap-2 justify-center">
-            <a href="">Whatsapp</a>
-            <a href="">Instagram</a>
+            <a href="https://wa.me/6281328528954">Whatsapp</a>
+            <a href="https://www.instagram.com/anjasferdiansyah">Instagram</a>
           </div>
         </div>
       </div>
